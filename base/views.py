@@ -1,5 +1,5 @@
 from django.shortcuts import render
-# from models import Images
+from base.models import Images
 from django.core.files.storage import FileSystemStorage
 from keras.models import load_model
 from keras.preprocessing import image
@@ -38,6 +38,8 @@ def predictImage(request):
 
     import numpy as np
     predictedLabel = labelInfo[str(np.argmax(predi[0]))]
+    NewImage = Images(path=filePathName,result=predictedLabel[1])
+    NewImage.save()
 
-    context = {'filePathName': filePathName,'predictedLabel':predictedLabel}
+    context = {'filePathName': filePathName,'predictedLabel':predictedLabel[1]}
     return render(request, 'index.html', context)
