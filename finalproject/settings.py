@@ -76,14 +76,24 @@ WSGI_APPLICATION = 'finalproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'PythonFinal',
+#         'USER':'postgres',
+#         'PASSWORD':'Aa8036673371',
+#         'HOST':'localhost',
+#     }
+# }
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'PythonFinal',
-        'USER':'postgres',
-        'PASSWORD':'Aa8036673371',
-        'HOST':'localhost',
+        'NAME': 'deipnsb86e16',
+        'USER':'cnbhwwrttmsaxe',
+        'PASSWORD':'6c553ceca7967f12dcf0d565de4fb458d1f9a4515de0f2d43010e338ca966fc7',
+        'HOST':'ec2-54-156-110-139.compute-1.amazonaws.com',
     }
 }
 
